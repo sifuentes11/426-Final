@@ -3,18 +3,6 @@ let token = localStorage.getItem('token');
 
 const $main = $('#body');
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
->>>>>>> master
 var locations = ["Abernathy", "Alumni", "Art Studio Building", "Hanes Art Center", "Battle", "Beard (Pharmacy)", "Bioinformatics", "Berryhill", "Bingham", "Bondurant Hall", "Caldwell", "Carmichael Arena", "Carrington Hall", "Carroll", "Carolina Hall", "Chapman Hall", "Clinical Sciences (Burnett-Womack)", "Cobb", "Coker", "Connor", "Craige-North", "Davie", "Center for Dramatic Art", "Davis Library", "Dean Smith Center", "Dental (Brauer Hall)", "Dey Hall", "Brooks Hall", "Fetzer Hall", "Gardner", "Gerrard", "FedEx Global Education", "Graham Memorial", "Greenlaw", "Genome Sciences Building", "Hamilton Hall", "Hanes Hall", "Hardin", "Hickerson House", "Hill", "Michael Hooker Research Center", "Horton", "Hospital (UNC)", "Hooker Fields", "Howell", "Kerr Hall (Pharmacy)", "Kenan Memorial Stadium", "Kenan Laboratories", "Kenan Music Building", "Knapp", "Koury Residence Hall", "Ackland", "Library (Davis)", "Lenoir", "Library (Wilson)", "Grad Library (House)", "Mary Ellen Jones", "Manning", "McColl Building", "McGavran-Greenberg (Public Health)", "MacNider", "Morehead Laboratory", "Morehead Planetarium", "Mitchell", "Murphey", "Murray Hall", "Naval ROTC Armory", "New East", "Neuroscience Research Building", "New West", "Paul Green Theatre", "Peabody", "Person", "Phillips", "Planetarium", "Playmaker’s Theatre", "Pre-Clinic Ed (Bullitt-Brinkhous Bldg)", "Public Health", "Rosenau (Public Health)", "Rizzo Center", "Sakai", "Stone Center", "Smith", "Sitterson", "Steele", "Student Union", "Swain Hall", "Taylor Hall", "Tate Turner Kuralt", "Van-Hecke-Wettach", "Venable Hall", "Wilson", "Woollen Gym"];
 
 /** This function to drive our autocomplete taken from: https://www.w3schools.com/howto/howto_js_autocomplete.asp */
@@ -155,21 +143,13 @@ async function handleAddButtonClick() {
 }
 
 async function handleCancelButtonClick() {
-<<<<<<< HEAD
     location.href = '../index.html'
-=======
-    window.location.href = '../mainPage/index.html'
->>>>>>> master
 }
 
 $(function () {
 
     $main.append(
     `
-<<<<<<< HEAD
-=======
-    <form autocomplete="off" action="location.href = '../mainPage/index.html'">
->>>>>>> master
 
     <section class="center" style="position:relative;padding-top:5%;height:100%;text-align:center;font-size:200%;vertical-align:center">
     <p>Event Name</p>
@@ -188,11 +168,7 @@ $(function () {
     <button class="button" type = "sub" style="width:25%;font-size:100%" id="addButton" onclick="handleAddButtonClick()">Add</button>
     <button class="button" type="reset" style="width:25%;font-size:100%" id="cancelButton" onclick="handleCancelButtonClick()";>Cancel</button>
     </section>
-<<<<<<< HEAD
   
-=======
-    </form>
->>>>>>> master
 
     `
 

@@ -22,11 +22,7 @@ async function addEvent() {
           }},
           type:"merge"
       });
-<<<<<<< HEAD
       location.href = '../index.html'
-=======
-      location.href = '../mainPage/index.html'
->>>>>>> master
     
 }
 
@@ -45,11 +41,7 @@ async function addStudentEvent() {
           }},
           type:"merge"
       });
-<<<<<<< HEAD
       location.href = '../index.html'
-=======
-      location.href = '../mainPage/index.html'
->>>>>>> master
     
 }
 
@@ -68,11 +60,7 @@ async function addAssignment() {
           }},
           type:"merge"
       });
-<<<<<<< HEAD
       location.href = '../index.html'
-=======
-      location.href = '../mainPage/index.html'
->>>>>>> master
     
 }
 
@@ -145,11 +133,7 @@ $(async function () {
     <textarea style="font-size:100%;width:50%;" id="inputDescription" rows="3" autofocus="autofocus">${description}</textarea>
     <p></p>
     <button class="button" style="width:25%;font-size:100%" id="addButton" onclick="handleAddButtonClick()">Save</button>
-<<<<<<< HEAD
     <button class="button" style="width:25%;font-size:100%" id="cancelButton" onclick="location.href = '../index.html'";>Cancel</button>
-=======
-    <button class="button" style="width:25%;font-size:100%" id="cancelButton" onclick="location.href = '../mainPage/index.html'";>Cancel</button>
->>>>>>> master
     </section>
     `
     )
@@ -158,8 +142,4 @@ $(async function () {
     //     addEvent();
     // }
 
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> master

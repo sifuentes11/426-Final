@@ -18,25 +18,9 @@ async function whichDelete(id) {
         deleteEvent(id);
     }
 
+
 }
 
-function parseTime(timeString) {
-    var postfix = " AM"
-    var hour = timeString.substring(0, 2);
-    if (hour.substring(1,2) == ":") {
-        hour = hour.substring(0,1);
-    }
-    if (parseInt(hour) > 12) {
-        postfix = " PM"
-        hour = parseInt(hour) - 12;
-    } 
-     
-    var min = timeString.substring(timeString.length-2, timeString.length);
-    var t = String(hour).concat(":").concat(min).concat(postfix);
-    return t;
-}
-
-<<<<<<< HEAD:MAIN/script.js
 function parseTime(timeString) {
     var postfix = " AM"
     var hour = timeString.substring(0, 2);
@@ -54,14 +38,11 @@ function parseTime(timeString) {
     return t;
 }
 
-=======
->>>>>>> master:MAIN/mainPage/script.js
 async function whichEdit(id) {
 
     if (selectedView == "user") {
         localStorage.setItem('editType', "user");
         localStorage.setItem('editId', id);
-<<<<<<< HEAD:MAIN/script.js
         location.href = 'edit/edit.html';
     } else if (selectedView == "private") {
         localStorage.setItem('editType', "private");
@@ -71,28 +52,14 @@ async function whichEdit(id) {
         localStorage.setItem('editType', "public");
         localStorage.setItem('editId', id);
         location.href = 'edit/edit.html';
-=======
-        location.href = '../edit/edit.html';
-    } else if (selectedView == "private") {
-        localStorage.setItem('editType', "private");
-        localStorage.setItem('editId', id);
-        location.href = '../edit/edit.html';
-    } else {
-        localStorage.setItem('editType', "public");
-        localStorage.setItem('editId', id);
-        location.href = '../edit/edit.html';
->>>>>>> master:MAIN/mainPage/script.js
     }
 
 
 }
-<<<<<<< HEAD:MAIN/script.js
 
 
 
 
-=======
->>>>>>> master:MAIN/mainPage/script.js
 
 async function deleteEvent(id) {
     const result = await axios({
@@ -144,6 +111,8 @@ async function logout() {
     localStorage.setItem('defaultView', "public");
     location.reload();
 }
+
+
 
 
 $(async function () {
@@ -240,27 +209,17 @@ $(async function () {
             `
         <p class="" style="padding:5px;width:100%;font-size:150%">
             <div class="columns">
-<<<<<<< HEAD:MAIN/script.js
                 <div class="column is-one-fifth" style="border-top-style:solid;border-bottom-style:solid;background-color:lightgreen;text-align:center;font-size:200%">
                     <p> ${month}/${date}/${year}  </p>
                     <p> ${parseTime(sortedEvents[i].time)} </p>
                    
-=======
-                <div class="column is-one-fifth" style="border-top-style:solid;border-bottom-style:solid;background-color:skyblue;text-align:center;font-size:200%">
-                    <p> ${new Date(sortedEvents[i].date).getMonth()}/${new Date(sortedEvents[i].date).getDay()}/${new Date(sortedEvents[i].date).getFullYear()}  </p>
-                    <p> ${parseTime(sortedEvents[i].time)} </p>
->>>>>>> master:MAIN/mainPage/script.js
 
                 </div>
                 <div class="column" style="border-top-style:solid;border-bottom-style:solid;background-color:orange;text-align:center;font-size:200%">
                     <b>${sortedEvents[i].name} </b>
                     <p>${sortedEvents[i].description} </p>
                 </div>
-<<<<<<< HEAD:MAIN/script.js
                 <div class="column is-one-fifth" style="width:124px;border-top-style:solid;border-bottom-style:solid;background-color:orange">
-=======
-                <div class="column is-one-fifth" style="width:124px;border-top-style:solid;border-bottom-style:solid;background-color:skyblue">
->>>>>>> master:MAIN/mainPage/script.js
                     <p style="padding:5px"><button class="button is-danger is-rounded is-centered" style="width:84px;" id="delete" onclick="whichDelete(${sortedEvents[i].id})">Delete</button></p>
                     <p style="padding:5px"><button class="button is-warning is-rounded is-centered" style="width:84px;" id="edit" onclick="whichEdit(${sortedEvents[i].id})">Edit</button></p>   
                 </div>
@@ -283,14 +242,7 @@ $(async function () {
             <br>
             <br>
             <br>
-<<<<<<< HEAD:MAIN/script.js
             <p class="has-text-black is-italic" style="text-align:center;color=white;font-size:120%">Quote of the day:</p>
             <p class="has-text-black" style="text-align:center;color=white;font-size:120%">"${(qresult.data.quoteText)}"</p>
         `)
 });
-=======
-            <p class="has-text-white is-italic" style="text-align:center;color=white;font-size:100%">Quote of the day:</p>
-            <p class="has-text-white" style="text-align:center;color=white;font-size:100%">"${(qresult.data.quoteText)}"</p>
-            )`)
-});
->>>>>>> master:MAIN/mainPage/script.js
