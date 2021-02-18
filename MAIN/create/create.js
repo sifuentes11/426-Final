@@ -80,7 +80,7 @@ async function addEvent() {
     var ID = Math.trunc((new Date().getTime()) / 1000)
     const result = await axios({
         method: 'POST',
-        url: 'http://localhost:3000/public/events/'.concat(ID),
+        url: 'http://mrwalters.com:31000/public/events/'.concat(ID),
         headers: {Authorization: `Bearer ${(token)}`},
         data: {"data":{
             "name": $("#inputName").val(),   
@@ -98,7 +98,7 @@ async function addStudentEvent() {
     var ID = Math.trunc((new Date().getTime()) / 1000)
     const result = await axios({
         method: 'POST',
-        url: 'http://localhost:3000/private/events/'.concat(ID),
+        url: 'http://mrwalters.com:31000/private/events/'.concat(ID),
         headers: {Authorization: `Bearer ${(token)}`},
         data: {"data":{
             "name": $("#inputName").val(),   
@@ -116,7 +116,7 @@ async function addAssignment() {
     var ID = Math.trunc((new Date().getTime()) / 1000)
     const result = await axios({
         method: 'POST',
-        url: 'http://localhost:3000/user/events/'.concat(ID),
+        url: 'http://mrwalters.com:31000/user/events/'.concat(ID),
         headers: {Authorization: `Bearer ${(token)}`},
         data: {"data":{
             "name": $("#inputName").val(),   
