@@ -64,7 +64,7 @@ async function whichEdit(id) {
 async function deleteEvent(id) {
     const result = await axios({
         method: 'DELETE',
-        url: 'http://localhost:3000/public/events/'.concat(id),
+        url: 'http://mrwalters.com:31000/public/events/'.concat(id),  /localhost:3000
         headers: {Authorization: `Bearer ${(token)}`}
       });
     location.reload();
@@ -73,7 +73,7 @@ async function deleteEvent(id) {
 async function deleteStudentEvent(id) {
     const result = await axios({
         method: 'DELETE',
-        url: 'http://localhost:3000/private/events/'.concat(id),
+        url: 'http://mrwalters.com:31000/private/events/'.concat(id),
         headers: {Authorization: `Bearer ${(token)}`}
       });
     location.reload();
@@ -82,7 +82,7 @@ async function deleteStudentEvent(id) {
 async function deleteAssignment(id) {
     const result = await axios({
         method: 'DELETE',
-        url: 'http://localhost:3000/user/events/'.concat(id),
+        url: 'http://mrwalters.com:31000/user/events/'.concat(id),
         headers: {Authorization: `Bearer ${(token)}`}
       });
     location.reload();
@@ -121,7 +121,7 @@ $(async function () {
     try {
         const result = await axios({
             method: 'GET',
-            url: 'http://localhost:3000/account/status',
+            url: 'http://mrwalters.com:31000/account/status',
             headers: {Authorization: `Bearer ${(token)}`}
         });
         loggedIn = true;
@@ -177,19 +177,19 @@ $(async function () {
     if (selectedView == "private") {
         result = await axios({
             method: 'GET',
-            url: 'http://localhost:3000/private/events',
+            url: 'http://mrwalters.com:31000/private/events',
             headers: {Authorization: `Bearer ${(token)}`}
         });
     } else if (selectedView == "user") {
         result = await axios({
             method: 'GET',
-            url: 'http://localhost:3000/user/events',
+            url: 'http://mrwalters.com:31000/user/events',
             headers: {Authorization: `Bearer ${(token)}`}
         });
     } else {
         result = await axios({
             method: 'GET',
-            url: 'http://localhost:3000/public/events',
+            url: 'http://mrwalters.com:31000/public/events',
             headers: {Authorization: `Bearer ${(token)}`}
         });
     }
