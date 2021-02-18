@@ -64,7 +64,7 @@ async function whichEdit(id) {
 async function deleteEvent(id) {
     const result = await axios({
         method: 'DELETE',
-        url: 'http://mrwalters.com:31000/public/events/'.concat(id),  /localhost:3000
+        url: 'http://mrwalters.com:31000/public/events/'.concat(id),  //localhost:3000
         headers: {Authorization: `Bearer ${(token)}`}
       });
     location.reload();
