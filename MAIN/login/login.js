@@ -14,7 +14,7 @@ $(async function () {
         try {
             let result = await axios({
                 method: 'POST',
-                url: 'http://localhost:3000/account/login',
+                url: 'http://mrwalters.com:31000/account/login',
                 data: {
                     "name": $('#login-username').val(),
                     "pass": $('#login-password').val(),
