@@ -10,7 +10,7 @@ const $main = $('#body');
 async function addEvent() {
     const result = await axios({
         method: 'POST',
-        url: 'http://localhost:3000/public/events/'.concat(editId),
+        url: 'http://mrwalters.com:31000/public/events/'.concat(editId),
         headers: {Authorization: `Bearer ${(token)}`},
         data: {"data":{
             "name": $("#inputName").val(),   
@@ -29,7 +29,7 @@ async function addEvent() {
 async function addStudentEvent() {
     const result = await axios({
         method: 'POST',
-        url: 'http://localhost:3000/private/events/'.concat(editId),
+        url: 'http://mrwalters.com:31000/private/events/'.concat(editId),
         headers: {Authorization: `Bearer ${(token)}`},
         data: {"data":{
             "name": $("#inputName").val(),   
@@ -48,7 +48,7 @@ async function addStudentEvent() {
 async function addAssignment() {
     const result = await axios({
         method: 'POST',
-        url: 'http://localhost:3000/user/events/'.concat(editId),
+        url: 'http://mrwalters.com:31000/user/events/'.concat(editId),
         headers: {Authorization: `Bearer ${(token)}`},
         data: {"data":{
             "name": $("#inputName").val(),   
@@ -83,19 +83,19 @@ $(async function () {
     if (editType == "private") {
         result = await axios({
             method: 'GET',
-            url: 'http://localhost:3000/private/events',
+            url: 'http://mrwalters.com:31000/private/events',
             headers: {Authorization: `Bearer ${(token)}`}
         });
     } else if (editType == "user") {
         result = await axios({
             method: 'GET',
-            url: 'http://localhost:3000/user/events',
+            url: 'http://mrwalters.com:31000/user/events',
             headers: {Authorization: `Bearer ${(token)}`}
         });
     } else {
         result = await axios({
             method: 'GET',
-            url: 'http://localhost:3000/public/events',
+            url: 'http://mrwalters.com:31000/public/events',
             headers: {Authorization: `Bearer ${(token)}`}
         });
     }
