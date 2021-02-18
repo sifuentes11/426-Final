@@ -12,7 +12,7 @@ $(async function () {
       try {
           let result = await axios({
               method: 'POST',
-              url: 'http://localhost:3000/account/create',
+              url: 'http://mrwalters.com:31000/account/create',
               data: {
                   "name": $('#sign-up-username').val(),
                   "pass": $('#sign-up-password').val(),
